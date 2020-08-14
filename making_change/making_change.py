@@ -3,17 +3,12 @@
 import sys
 
 def making_change(amount, denominations):
-    # Base case
-    if amount == 0:
-        return 1
+    ways = [1] + [0] * amount
+    for coin in denominations:
+        for i in range(coin, amount+1):
+            ways[i] += ways[i - coin]
 
-    elif amount < 0:
-        return 0
-
-    else: 
-        # make 3 recursive calls
-        return making_change(amount-2) + making_change(amount-5) + making_change(amount-10)
-
+    return ways[amount]
 
 if __name__ == "__main__":
   # Test our your implementation from the command line
