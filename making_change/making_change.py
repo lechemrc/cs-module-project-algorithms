@@ -3,9 +3,16 @@
 import sys
 
 def making_change(amount, denominations):
-  # Your code here
+    # Base case
+    if amount == 0:
+        return 1
 
-  pass
+    elif amount < 0:
+        return 0
+
+    else: 
+        # make 3 recursive calls
+        return making_change(amount-2) + making_change(amount-5) + making_change(amount-10)
 
 
 if __name__ == "__main__":

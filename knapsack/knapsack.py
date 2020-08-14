@@ -1,27 +1,27 @@
 #!/usr/bin/python
 
 import sys
-from collections import namedtuple
+# from collections import namedtuple
 
-Item = namedtuple('Item', ['index', 'size', 'value'])
+# Item = namedtuple('Item', ['index', 'size', 'value'])
 
-def knapsack_solver(items, weight_limit):
-    max_value = -1
-    best_combo = None
-    for i in range(1, len(items)+1):
-        list_of_combos = list(combinations(items, i))
-        for combo in list_of_combos:
-            value = 0 # of the entire combo
-            weight = 0 # of the entire combo
-            for item in combo:
-                value += item.value
-                weight += item.weight
-            if weight <= weight_limit:
-                if value > max_value:
-                    max_value = value
-                    best_combo = combo
+# def knapsack_solver(items, weight_limit):
+#     max_value = -1
+#     best_combo = None
+#     for i in range(1, len(items)+1):
+#         list_of_combos = list(combinations(items, i))
+#         for combo in list_of_combos:
+#             value = 0 # of the entire combo
+#             weight = 0 # of the entire combo
+#             for item in combo:
+#                 value += item.value
+#                 weight += item.weight
+#             if weight <= weight_limit:
+#                 if value > max_value:
+#                     max_value = value
+#                     best_combo = combo
 
-    return best_combo
+#     return best_combo
 
 
 if __name__ == '__main__':
