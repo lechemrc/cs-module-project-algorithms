@@ -8,7 +8,7 @@ def sliding_window_max(nums, k):
     for i in range(len(nums) - k + 1):
         max_array.append(max(nums[i:i+k]))
 
-    return max_array
+    return max_array 
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
