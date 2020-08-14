@@ -3,9 +3,20 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    product_array = []
+    base = 1
+    
+    # Find the value of product of full list
+    for i in arr:
+        base = base * i
 
-    pass
+    # Divide by each index to account for that value not being included
+    # Then append to product_array
+    for j in arr:
+        val = base / j
+        product_array.append(val)
+
+    return product_array
 
 
 if __name__ == '__main__':
