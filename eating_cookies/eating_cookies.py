@@ -3,7 +3,16 @@ Input: an integer
 Returns: an integer
 '''
 def eating_cookies(n):
-    # Your code here
+    # Base case
+    if n == 0:
+        return 1
+
+    elif n < 0:
+        return 0
+
+    else: 
+        # make 3 recursive calls
+        return eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3)
 
     pass
 
